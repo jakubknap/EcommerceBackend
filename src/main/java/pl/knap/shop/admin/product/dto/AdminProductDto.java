@@ -21,7 +21,7 @@ public class AdminProductDto {
     @NotNull
     @Length(min = 4)
     private String description;
-
+    private String fullDescription;
     @Min(0)
     private BigDecimal price;
     private AdminProductCurrency currency;
