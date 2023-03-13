@@ -78,7 +78,7 @@ public class AdminProductController {
                 .id(id)
                 .name(adminProductDto.getName())
                 .description(adminProductDto.getDescription())
-                .category(adminProductDto.getCategory())
+                .categoryId(adminProductDto.getCategoryId())
                 .price(adminProductDto.getPrice())
                 .currency(adminProductDto.getCurrency())
                 .image(adminProductDto.getImage())
@@ -89,7 +89,6 @@ public class AdminProductController {
 
     private String slugifySlug(String slug) {
         Slugify slugify = new Slugify();
-        return slugify.withCustomReplacement("_","-")
-                .slugify(slug);
+        return slugify.withCustomReplacement("_","-").slugify(slug);
     }
 }
